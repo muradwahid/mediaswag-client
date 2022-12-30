@@ -9,7 +9,7 @@ const ProfilePosts = () => {
   const { data:posts=[],refetch } = useQuery({
     queryKey: [`${user?.email}`],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/profileposts/${user?.email}`);
+      const res = await fetch(`https://my-app-server-ten.vercel.app/profileposts/${user?.email}`);
       const data = await res.json();
       return data;
     }

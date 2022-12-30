@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const ViewProfile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <>
+    <div className='pt-20'>
       <div className='mt-16 pb-12 w-4/5 mx-auto'>
         <div className=' flex justify-center'>
           <div className='flex items-center gap-5 text-emerald-600'>
@@ -45,7 +45,7 @@ const ViewProfile = () => {
           </NavLink>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

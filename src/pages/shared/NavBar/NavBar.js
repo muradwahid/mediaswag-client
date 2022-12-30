@@ -12,7 +12,7 @@ const NavBar = () => {
 		setProfileModal(false);
 	}
 	return (
-		<header className='bg-white shadow-md py-2'>
+		<header className='bg-white shadow-md py-2 fixed w-full top-0'>
 			<nav className='w-4/5 mx-auto flex justify-between items-center'>
 				<div className='flex gap-8 text-[22px] items-center'>
 					<p><i className="fa-solid fa-bell text-emerald-600"></i></p>

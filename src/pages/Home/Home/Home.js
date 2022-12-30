@@ -10,14 +10,14 @@ const Home = () => {
 	const {data:posts=[],isLoading,refetch} = useQuery({
 		queryKey: ['posts'],
 		queryFn: async () => {
-			const res = await fetch('http://localhost:5000/posts');
+			const res = await fetch('https://my-app-server-ten.vercel.app/posts');
 			const data = await res.json();
 			return data;
 		}
 	})
 
 	return (
-		<div>
+		<div className='pt-20'>
 			<Posts />
 			<MessageModal/>
 			{

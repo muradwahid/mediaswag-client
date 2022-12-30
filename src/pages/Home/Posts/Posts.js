@@ -29,7 +29,7 @@ const Posts = () => {
             userName:user?.displayName,
             date: date.toDateString()
           }
-          fetch(`http://localhost:5000/posts`, {
+          fetch(`https://my-app-server-ten.vercel.app/posts`, {
             method: "POST",
             headers: {
               "content-type":"application/json"

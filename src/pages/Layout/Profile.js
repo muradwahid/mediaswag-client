@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from '../shared/Footer/Footer';
 import NavBar from '../shared/NavBar/NavBar';
 import ViewProfile from '../ViewProfile/ViewProfile/ViewProfile';
 
@@ -8,7 +9,8 @@ const Profile = () => {
     <div>
       <NavBar />
       <ViewProfile />
-      <Outlet/>
+      <Outlet />
+      <Footer/>
     </div>
   );
 };

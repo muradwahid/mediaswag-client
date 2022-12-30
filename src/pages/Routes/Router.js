@@ -8,6 +8,7 @@ import SignUp from "../SignUp/SignUp";
 import College from "../ViewProfile/About/College";
 import Contact from "../ViewProfile/About/Contact";
 import Education from "../ViewProfile/About/Education";
+import HighSchool from "../ViewProfile/About/HighSchool";
 import ProfilePosts from "../ViewProfile/ProfilePosts/ProfilePosts";
 import PrivetRoute from "./PrivetRoute";
 
@@ -24,7 +25,8 @@ export const router = createBrowserRouter([
                 path: "about", element: <ProfileAbout/>, children: [
                     { path: "education", element: <Education /> },
                     { path: "contact", element: <Contact /> },
-                    { path: 'education/education-add', element: <College /> }
+                    { path: 'education/education-add', element: <College /> },
+                    {path:'education/highschool-add',element:<HighSchool/>}
                 ]
             },
             { path: "posts", element: <ProfilePosts /> }

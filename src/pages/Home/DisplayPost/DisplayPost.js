@@ -10,13 +10,13 @@ const DisplayPost = ({ user, post }) => {
   const { data: comments = [], refetch } = useQuery({
     queryKey: [`comment`],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/comment`);
+      const res = await fetch(`https://my-app-server-ten.vercel.app/comment`);
       const data = await res.json();
       return data
     }
   })
   useEffect(() => {
-    fetch(`http://localhost:5000/comment/${_id}`)
+    fetch(`https://my-app-server-ten.vercel.app/comment/${_id}`)
       .then(res => res.json())
       .then(data => {
         setLengthComment(data);
@@ -33,7 +33,7 @@ const DisplayPost = ({ user, post }) => {
       commentImg: user?.photoURL,
       commentName:user?.displayName
     }
-    fetch('http://localhost:5000/comment', {
+    fetch('https://my-app-server-ten.vercel.app/comment', {
       method: "POST",
       headers: {
         "content-type":"application/json"
