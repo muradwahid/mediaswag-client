@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const ViewProfile = () => {
@@ -21,8 +21,28 @@ const ViewProfile = () => {
       </div>
       <div className='border-t-2 border-b-2 py-2 bg-white '>
         <div className='text-[20px] font-semibold flex gap-6 w-4/5 mx-auto text-gray-700'>
-          <Link>Posts</Link>
-          <Link to={`about`}>About</Link>
+          <NavLink to="posts">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? "border-b-2 border-emerald-600" : undefined
+                }
+              >
+                Posts
+              </span>
+            )}
+          </NavLink>
+          <NavLink to="about/education">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? "border-b-2 border-emerald-600" : undefined
+                }
+              >
+                About
+              </span>
+            )}
+          </NavLink>
         </div>
       </div>
     </>

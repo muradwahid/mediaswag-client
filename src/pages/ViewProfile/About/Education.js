@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Education = () => {
   return (
     <div className='w-3/5 pt-6'>
       <div>
         <h3 className='text-2xl font-semibold text-gray-700'>College</h3>
-        <div className='flex gap-4 my-6 cursor-pointer items-center'>
+        <Link to="education-add" className='flex gap-4 my-6 cursor-pointer items-center'>
           <i className="fa-solid fa-circle-plus text-[22px] text-emerald-600"></i>
           <p className='font-bold text-emerald-600'>Add college</p>
-        </div>
+        </Link>
 
         <div className='flex gap-4 items-center'>
           <i className="fa-solid fa-graduation-cap bg-slate-200 text-[22px] p-2 rounded-full text-emerald-600 "></i>
-          <div>
+          <div className='bg-emerald-100 px-4 py-1 rounded-xl'>
             <p>Hon's final year at <span className='font-semibold'>National University</span></p>
             <small className='text-gray-500'>Januray 19,2017- Present</small>
           </div>
@@ -26,7 +27,7 @@ const Education = () => {
 
         <div className='flex gap-4 items-center'>
           <i className="fa-solid fa-graduation-cap bg-slate-200 text-[22px] p-2 rounded-full text-emerald-600 "></i>
-          <div>
+          <div className='bg-emerald-100 px-4 py-1 rounded-xl'>
             <p>Hon's final year at <span className='font-semibold'>National University</span></p>
             <small className='text-gray-500'>Januray 19,2017- Present</small>
           </div>

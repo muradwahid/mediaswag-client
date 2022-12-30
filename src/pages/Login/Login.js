@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 const Login = () => {
 	const { user, signinPopup } = useContext(AuthContext);
 	const googleProvider = new GoogleAuthProvider();
-	const navigate = useNavigate();
+	const navigate = useNavigate('/');
 	const handleGoogleLogin = () => {
 		signinPopup(googleProvider)
 			.then(result => {

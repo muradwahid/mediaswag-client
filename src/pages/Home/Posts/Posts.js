@@ -6,6 +6,7 @@ const Posts = () => {
   const imgHostKey = process.env.REACT_APP_imgbb_key;
   const handlePost = (e) => {
     e.preventDefault();
+    const date = new Date();
     const form = e.target;
     const postText = form.postText.value;
     const image = form.image.files[0];
@@ -24,7 +25,9 @@ const Posts = () => {
             text: postText,
             email: user?.email,
             image: imgData.data.url,
-            profilePhoto:user?.photoURL
+            profilePhoto: user?.photoURL,
+            userName:user?.displayName,
+            date: date.toDateString()
           }
           fetch(`http://localhost:5000/posts`, {
             method: "POST",
@@ -36,6 +39,7 @@ const Posts = () => {
             .then(res => res.json())
             .then(postData => {
               console.log(postData);
+              form.reset()
             })
         }
 
